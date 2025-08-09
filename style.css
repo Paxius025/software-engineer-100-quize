@@ -59,8 +59,22 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.submit-btn:hover {
-  background-color: #0056b3;
+
+.test-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #c5a87d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.test-btn:hover {
+  background-color: #e9e4ba;
 }
 #results-container {
   display: none;

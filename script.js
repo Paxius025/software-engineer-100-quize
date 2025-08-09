@@ -63,7 +63,7 @@ submitButton.addEventListener("click", () => {
     const selectedOption = document.querySelector(
       `input[name="question${index}"]:checked`
     );
-    if (selectedOption && selectedOption.value === question.correctAnswerText) {
+    if (selectedOption && selectedOption.value === question.answer) {
       score++;
     }
   });
@@ -72,3 +72,18 @@ submitButton.addEventListener("click", () => {
   resultsContainer.style.display = "block";
   submitButton.style.display = "none";
 });
+
+const testButton = document.getElementById("test-button");
+
+testButton.addEventListener("click", () => {
+  quizData.forEach((question, index) => {
+    const options = document.querySelectorAll(`input[name="question${index}"]`);
+    if (options.length > 0) {
+      const randomIndex = Math.floor(Math.random() * options.length);
+      options[randomIndex].checked = true;
+    }
+  });
+
+  submitButton.click();
+});
+
