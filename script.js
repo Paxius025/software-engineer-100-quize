@@ -85,5 +85,7 @@ testButton.addEventListener("click", () => {
   });
 
   submitButton.click();
+
+   resultsContainer.scrollIntoView({ behavior: "smooth" });
 });
 
